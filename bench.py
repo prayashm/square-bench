@@ -38,20 +38,19 @@ b) rectangle
 c) parallelogram
 d) rhombus
 e) kite
-f) trapezium
-g) all of the above
-h) none of the above
+f) all of the above
+g) none of the above
 
 End your reply with a line of the form "Answer: <letter>"."""
 
-ANSWER_RE = re.compile(r"answer:\s*\(?\**([a-h])\b", re.IGNORECASE)
+ANSWER_RE = re.compile(r"answer:\s*\(?\**([a-g])\b", re.IGNORECASE)
 
 
 def parse(text: str) -> str | None:
     if m := ANSWER_RE.findall(text):
         return m[-1].lower()
     stripped = text.strip().strip("().*").lower()
-    return stripped if re.fullmatch(r"[a-h]", stripped) else None
+    return stripped if re.fullmatch(r"[a-g]", stripped) else None
 
 
 async def ask(client, sem, model, image: Path, run: int) -> dict:

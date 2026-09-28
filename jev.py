@@ -15,11 +15,10 @@ OPTIONS = {
     "c": "parallelogram",
     "d": "rhombus",
     "e": "kite",
-    "f": "trapezium",
-    "g": "all of the above",
-    "h": "none of the above",
+    "f": "all of the above",
+    "g": "none of the above",
 }
-SHAPES = ["square", "rectangle", "parallelogram", "rhombus", "kite", "trapezium"]
+SHAPES = ["square", "rectangle", "parallelogram", "rhombus", "kite"]
 
 STATES = {
     "named": "The shape is a square.",
