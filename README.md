@@ -24,13 +24,8 @@ Look at the shape in the image. Which of the following is it?
 
 ```sh
 cp .env.sample .env                                  # fill in keys
-uv run --env-file .env bench.py                      # all models in MODELS, 3 runs each, every image in images/
-uv run --env-file .env bench.py --runs 5 --models anthropic/claude-opus-5.5 openai/gpt-6-sol
 uv run --env-file .env jev.py                        # Jev is text-only, so the shape is described in text
 ```
-
-Drop real photos into `images/` to add cases. Raw responses go to `results.jsonl`.
-Parser check: `uv run --with httpx python test_bench.py`.
 
 ## Results (2026-09-28, 3 runs each, about $0.67)
 
@@ -49,4 +44,4 @@ Parser check: `uv run --with httpx python test_bench.py`.
 | z-ai/glm-5v-turbo             | fx3         | fx3                  |
 | typesafe/jev-router           | fx3         | fx3                  |
 
-`typesafe/jev-router` routes to other models, so its answers are not Jev's own. `meta/muse-spark-1.3` has no zero-data-retention endpoint, so it fails on accounts that require ZDR.
+`typesafe/jev-router` routes to other models, so its answers are not Jev's own.
