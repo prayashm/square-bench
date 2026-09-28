@@ -13,6 +13,8 @@ uv run --env-file .env bench.py --runs 5 --models anthropic/claude-opus-5.5 open
 uv run --env-file .env jev.py                        # Jev is text-only, so the shape is described in text
 ```
 
+To see the question the way the models do, with selectable options: `open question.html`.
+
 Drop real photos into `images/` to add cases. Raw responses go to `results.jsonl`.
 Parser check: `uv run --with httpx python test_bench.py`.
 
