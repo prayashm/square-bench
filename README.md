@@ -4,6 +4,20 @@ Asks vision models whether a square is a square, rectangle, parallelogram, rhomb
 
 A square is all five shapes, so the expected answer is `f`. The rotated image tests whether a model mistakes a tilted square for only a rhombus.
 
+## The question
+
+<img src="images/square.png" alt="A square" width="200">
+
+Look at the shape in the image. Which of the following is it?
+
+- [ ] a) square
+- [ ] b) rectangle
+- [ ] c) parallelogram
+- [ ] d) rhombus
+- [ ] e) kite
+- [ ] f) all of the above
+- [ ] g) none of the above
+
 ## Run
 
 ```sh
@@ -12,8 +26,6 @@ uv run --env-file .env bench.py                      # all models in MODELS, 3 r
 uv run --env-file .env bench.py --runs 5 --models anthropic/claude-opus-5.5 openai/gpt-6-sol
 uv run --env-file .env jev.py                        # Jev is text-only, so the shape is described in text
 ```
-
-To see the question the way the models do, with selectable options: `open question.html`.
 
 Drop real photos into `images/` to add cases. Raw responses go to `results.jsonl`.
 Parser check: `uv run --with httpx python test_bench.py`.
