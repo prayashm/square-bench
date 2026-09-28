@@ -1,0 +1,3 @@
+.ruff_cache/
+*.jsonl
+__pycache__/
