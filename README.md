@@ -1,4 +1,4 @@
-# quad-bench
+# square-bench
 
 ## The question
 
