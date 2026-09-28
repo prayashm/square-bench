@@ -4,6 +4,8 @@ Asks vision models whether a square is a square, rectangle, parallelogram, rhomb
 
 A square is all five shapes, so the expected answer is `f`. The rotated image tests whether a model mistakes a tilted square for only a rhombus.
 
+Inspired by Vsauce's short [I 🟥 Quadrilaterals](https://www.youtube.com/shorts/asTywgpiSkQ).
+
 ## The question
 
 <img src="images/square.png" alt="A square" width="200">
