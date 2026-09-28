@@ -24,7 +24,7 @@ Look at the shape in the image. Which of the following is it?
 
 ```sh
 cp .env.sample .env                                  # fill in keys
-uv run --env-file .env jev.py                        # Jev is text-only, so the shape is described in text
+uv run --env-file .env bench.py
 ```
 
 ## Results (2026-09-28, 3 runs each, about $0.67)
